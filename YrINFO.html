@@ -1,0 +1,67 @@
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="https://cdn.icon-icons.com/icons2/54/PNG/256/computer_pc_10894.png">
+<script src="handle-activex-ie.js"></script>
+<body>
+<title>YrINFO</title>
+<script>
+function getOS() {
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Your Operating System is: Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'Your Operating System is: iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Your Operating System is: Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Your Operating System is: Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Your Operating System is: Linux';
+  }
+
+  return os;
+}
+</script>
+<h1>YrINFO</h1>
+<button onclick="window.location.reload();">Refresh</button>
+<p>--INFO--</p>
+<script>
+document.write(getOS());
+</script>
+<br>
+</br>
+<script>
+if (navigator.userAgent.indexOf("WOW32") != -1 || 
+        navigator.userAgent.indexOf("Win32") != -1 ){
+       document.write("Your architecture is 32 bit");
+    } else {
+       document.write("Your architecture is 64 bit");
+    }
+</script>
+<br>
+</br>
+<script>
+window.screen.availHeight
+window.screen.availWidth
+document.write("Screen Resolution: ")
+document.write(window.screen.availWidth)
+document.write("x")
+document.write(window.screen.availHeight)
+<br>
+</br>
+</script>
+<script>
+navigator.deviceMemory
+document.write("Installed Ram (Memory): ")
+document.write(navigator.deviceMemory)
+</script>
+</body>
+</head>
+
