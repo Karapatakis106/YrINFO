@@ -1,5 +1,5 @@
 function getVideoCardInfo() {
-// Finding Graphics Card name, using openGL. Might be unstable
+// Finding Graphics Card name, using WebGL. Might be unstable
 
   const gl = document.createElement('canvas').getContext('webgl');
 
